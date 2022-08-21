@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skycore test</title>
+    <link rel="stylesheet" href="./vendor/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav class="side-bar-container">
+            <div class="side-bar-menu-icon">
+                <ul>
+                    <li>
+                        <a href="">
+                            <img src="./icons/Badge.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./icons/Wrench.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./icons/Comment.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./icons/Sync.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./icons/Building.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="side-menu-bar-content">
+                <ul>
+                    <li class="side-bar-heading">
+                        <a href="">
+                            <img src="./icons/Badge_2.svg" alt="">Menu Heading
+                        </a>
+                    </li>
+                    <li  class="active">
+                        <a href="">
+                            Menu Item 1
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Menu Item 1
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Menu Item 1
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Menu Item 1
+                        </a>
+                    </li>
+                </ul>
+                <div class="side-bar-close-toggle">
+                    <a>
+                        <img src="./icons/Vector.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </nav>
+    
+        <section class="section-container">
+            <h2 class="title">Landing page</h2>
+            
+            <div class="accordion-container">
+                <div class="accordion custom-accordion" id="item-1">
+                    <div class="accordion-item custom-accordion-item">
+                        <h2 class="accordion-header custom-accordion-header" id="headingOne">
+                            <button class="accordion-button custom-accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Accordion <img src="./icons/Question.svg" alt="" />
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse custom-accordion-collapse collapse show" aria-labelledby="headingOne"
+                            data-bs-parent="#item-1">
+                            <div class="accordion-body custom-accordion-body">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, quidem natus at quod ex aliquid laboriosam atque ab dolore ipsa tempora dolores assumenda fuga quae provident maxime, similique culpa in!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="text-end">
+                <button class="btn" id="showPopup">Button</button>
+            </div>
+    
+            <div class="table-container table-responsive">
+                <table class="table table-borderless">
+                    <thead class="table-light">
+                        <tr>
+                            <th scope="col">Column 1</th>
+                            <th scope="col">Column 1</th>
+                            <th scope="col">Column 1</th>
+                            <th scope="col">Column 1</th>
+                            <th scope="col">[X]</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Lorem ipsum
+                                <div class="status">
+                                    <span class="status-sucess">Status</span><span class="dot"></span><span class="status-active">Status2</span>
+                                </div>
+                                <button class="btn btn-light">Edit <img src="./icons/Icon.svg" alt=""></button>
+                            </th>
+                            <td>Data</td>
+                            <td>Link</td>
+                            <td>Data</td>
+                            <td>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" checked value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <div class="alert-popup">
+            <div class="popup-url">
+                <img src="https://via.placeholder.com/236x82" alt="">
+            </div>
+            <a href="john.doe@example.com">john.doe@example.com</a>
+        </div>
+    </div>
+
+    <script src="./vendor/js/jquery-3.6.0.min.js"></script>
+    <script src="./vendor/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

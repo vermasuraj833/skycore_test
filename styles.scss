@@ -1,0 +1,262 @@
+/*  import google fonts */
+@import "https://fonts.googleapis.com/css2?&family=Open+Sans:wght@400;700&display=swap";
+:root {
+  --white-color: #ffffff;
+  --text-color: #000000;
+  --primary-color: #2a74df;
+  --link-color: #1b59b1;
+  --side-bar-shadow-color: 3px 0px 4px -2px rgba(0, 0, 0, 0.41);
+  --side-bar-close-button-shadow-color: 1px 1px 4px 1px rgba(0, 0, 0, 0.25);
+  --side-bar-active-bg-color: #e9f1fc;
+  --active-color: #2156a7;
+  --success-color: #1f7018;
+  --popup-alert-shadow-color: 3px 3px 6px rgba(0, 0, 0, 0.25);
+  --button-shadow-color: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  --border-color: #424242;
+  --table-border-color: #e0e0e0;
+  --header-bg-color: #f5f5f5;
+  --btn-light-color: #e9f1fc;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 16px;
+  background-color: var(--white-color);
+  color: var(--text-color);
+  font-family: "Open Sans", sans-serif;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+a {
+  color: var(--text-color);
+  cursor: pointer;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+  &:active {
+    text-decoration: underline;
+  }
+}
+.btn {
+  min-width: 190px;
+  height: 51px;
+  color: var(--white-color);
+  background-color: var(--primary-color);
+  &:hover {
+    color: var(--white-color);
+  }
+  &:active {
+    color: var(--white-color);
+  }
+
+  &.btn-light {
+    min-width: 67px;
+    height: 29px;
+    background-color: var(--btn-light-color);
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+}
+.wrapper {
+  height: 100vh;
+  padding-left: 316px;
+  transition: all 0.5s ease;
+  .side-bar-container {
+    position: fixed;
+    left: 316px;
+    width: 300px;
+    height: 100vh;
+    margin-left: -316px;
+    background: #000;
+    transition: all 0.5s ease;
+    box-shadow: var(--side-bar-shadow-color);
+    z-index: 1000;
+    .side-bar-menu-icon {
+      width: 67px;
+      position: fixed;
+      background-color: var(--primary-color);
+      left: 0;
+      top: 0;
+      height: 100%;
+      ul {
+        text-align: center;
+        margin-top: 168px;
+        li {
+          padding-bottom: 22px;
+        }
+      }
+    }
+    .side-menu-bar-content {
+      background-color: var(--white-color);
+      height: 100%;
+      ul {
+        text-align: center;
+        padding: 168px 0 0 65px;
+        height: 100vh;
+        li {
+          padding: 0 10px;
+          a {
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+          }
+          &.active {
+            background-color: var(--side-bar-active-bg-color);
+            a {
+              color: var(--link-color);
+              text-decoration: underline;
+              font-weight: 700;
+            }
+          }
+          &:hover {
+            background-color: var(--side-bar-active-bg-color);
+            a {
+              text-decoration: underline;
+              font-weight: 700;
+            }
+          }
+        }
+        li.side-bar-heading {
+          background-color: var(--white-color);
+          a {
+            color: var(--link-color);
+            font-weight: 700;
+            border-bottom: 1px solid var(--border-color);
+            img {
+              padding-right: 8px;
+            }
+          }
+        }
+      }
+      .side-bar-close-toggle {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        top: 110px;
+        right: -12px;
+        a {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 100%;
+          background-color: var(--white-color);
+          box-shadow: var(--side-bar-close-button-shadow-color);
+        }
+      }
+    }
+  }
+  .section-container {
+    width: 100%;
+    height: 100%;
+    padding: 16px;
+    .title {
+      margin-bottom: 52px;
+    }
+    .accordion-container {
+      margin-bottom: 26px;
+      .custom-accordion {
+        .custom-accordion-item {
+          border-radius: 0;
+          .custom-accordion-header {
+            .custom-accordion-button {
+              font-weight: 700;
+              padding: 12px;
+              background-color: var(--header-bg-color);
+              color: var(--text-color);
+              img {
+                padding-left: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .table-container {
+      border: 1px solid var(--table-border-color);
+      margin-top: 24px;
+      .table {
+        margin-bottom: 0;
+        .table-light {
+          border-bottom: 1px solid var(--table-border-color);
+          tr {
+            th {
+              background-color: var(--header-bg-color);
+              padding: 16px;
+            }
+          }
+        }
+        .status {
+          display: flex;
+          align-items: center;
+          padding: 8px 0;
+          font-size: 14px;
+          .status-sucess {
+            color: var(--success-color);
+          }
+          .dot {
+            margin: 0 6px;
+            padding: 6px;
+            background-color: #c4c4c4;
+            border-radius: 100%;
+          }
+          .status-active {
+            color: var(--active-color);
+          }
+        }
+      }
+    }
+  }
+  .alert-popup {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 9999;
+    box-shadow: var(--popup-alert-shadow-color);
+    border-radius: 10px;
+    background-color: var(--white-color);
+    padding: 12px;
+    display: none;
+    .popup-url {
+      border: 1px solid var(--border-color);
+    }
+  }
+}
+.wrapper.left-side-bar {
+  padding-left: 65px;
+  .section-container {
+    position: relative;
+    padding-left: 35px;
+    margin-right: 65px;
+  }
+  .side-bar-container {
+    left: 80px;
+  }
+}
+@media (max-width: 578px) {
+  .wrapper {
+    padding-left: 65px;
+    .side-bar-container {
+      left: 80px;
+    }
+  }
+  .wrapper.left-side-bar {
+    .side-bar-container {
+      left: 316px;
+    }
+  }
+}
